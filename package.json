@@ -1,0 +1,25 @@
+{
+  "name": "leetcodeleaderboardbot",
+  "version": "1.0.0",
+  "description": "This is a node bot to help create leetcode leaderboards on your discord server!",
+  "main": "index.js",
+  "scripts": {
+    "start": "/node_modules/.bin/nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/rest": "^1.1.0",
+    "axios": "^0.27.2",
+    "discord.js": "^14.3.0",
+    "node-cron": "^3.0.2",
+    "pg": "^8.8.0",
+    "quickchart-js": "^3.1.0",
+    "sequelize": "^6.21.4"
+  },
+  "devDependencies": {
+    "eslint": "^8.23.0",
+    "nodemon": "^2.0.19"
+  }
+}
