@@ -3,8 +3,8 @@ const Sequelize = require('sequelize');
 const CONSTANTS = require(path.join(__dirname, '..', 'constants'));
 const LOCALCONSTANTS = CONSTANTS.sequelize;
 const { syncTable } = require(path.join(__dirname, 'syncTable'));
-
-const sequelize = new Sequelize(LOCALCONSTANTS.db, LOCALCONSTANTS.username, LOCALCONSTANTS.password, LOCALCONSTANTS.config);
+const { sequelizeDbPassword, sequelizeDbUsername } = require(path.join(__dirname, '..', 'config.json'));
+const sequelize = new Sequelize(LOCALCONSTANTS.db, sequelizeDbUsername, sequelizeDbPassword, LOCALCONSTANTS.config);
 
 const connect = async () => {
 	try {

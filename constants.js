@@ -1,6 +1,4 @@
 const Sequelize = require('sequelize');
-const path = require('node:path');
-const { sequelizeDbPassword } = require(path.join(__dirname, 'config.json'));
 
 module.exports = {
 	/* One parent key for each folder + errors */
@@ -77,8 +75,6 @@ module.exports = {
 	},
 	sequelize: {
 		db: 'Leetcode_leaderboard_bot_db',
-		username: 'postgres',
-		password: sequelizeDbPassword,
 		config: {
 			host: 'localhost',
 			dialect: 'postgres',
