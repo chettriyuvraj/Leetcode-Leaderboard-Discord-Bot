@@ -118,7 +118,7 @@ module.exports = {
 					discord_username: {
 						type: Sequelize.STRING(100),
 						allowNull: false,
-						unique: false,
+						unique: true,
 					},
 					discord_tag: {
 						type: Sequelize.INTEGER,
