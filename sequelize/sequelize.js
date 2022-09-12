@@ -4,7 +4,7 @@ const CONSTANTS = require(path.join(__dirname, '..', 'constants'));
 const LOCALCONSTANTS = CONSTANTS.sequelize;
 const { syncTable } = require(path.join(__dirname, 'syncTable'));
 const { sequelizeDbPassword, sequelizeDbUsername } = require(path.join(__dirname, '..', 'config.json'));
-const sequelize = new Sequelize(`${LOCALCONSTANTS.db}`, `${sequelizeDbUsername}`, `${sequelizeDbPassword}`, LOCALCONSTANTS.config);
+const sequelize = new Sequelize(`postgres://${sequelizeDbUsername}:${sequelizeDbPassword}@localhost/${LOCALCONSTANTS.db}`, LOCALCONSTANTS.config);
 
 const connect = async () => {
 	try {
