@@ -36,7 +36,7 @@ module.exports = {
 				hard_solved: userStats.hard.count,
 				total_solved: userStats.all.count,
 			});
-			await interaction.editReply(`Successfully registered user! You have solved a total of ${userStats.all.count} problems`);
+			await interaction.editReply('Successfully registered user!');
 		}
 		catch (error) {
 			if (error.name === CONSTANTS.errors.SequelizeUniqueConstraintError) {
