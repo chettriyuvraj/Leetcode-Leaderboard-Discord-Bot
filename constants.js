@@ -74,7 +74,6 @@ module.exports = {
 		},
 	},
 	sequelize: {
-		db: 'Leetcode_leaderboard_bot_db',
 		config: {
 			host: 'localhost',
 			dialect: 'postgres',
