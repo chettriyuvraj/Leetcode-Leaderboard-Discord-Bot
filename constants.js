@@ -10,6 +10,7 @@ module.exports = {
 	errors: {
 		SequelizeUniqueConstraintError: 'SequelizeUniqueConstraintError',
 		NoSuchUserExistsError: 'NoSuchUserExistsError',
+		LeetcodeAPIError: 'LeetcodeAPIError',
 	},
 	events: {
 		interactionCreate: {

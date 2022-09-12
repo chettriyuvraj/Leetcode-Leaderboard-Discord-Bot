@@ -42,6 +42,9 @@ module.exports = {
 			if (error.name === CONSTANTS.errors.SequelizeUniqueConstraintError) {
 				await interaction.editReply('Already registered! P.S One Discord user can be mapped to one Leetcode username only (and vice versa)');
 			}
+			else if (error.name === CONSTANTS.errors.LeetcodeAPIError) {
+				await interaction.editReply(error.message);
+			}
 			else {
 				await interaction.editReply('Error while registering user!');
 			}

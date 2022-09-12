@@ -4,6 +4,7 @@ const CONSTANTS = require(path.join(__dirname, '..', 'constants'));
 const LOCALCONSTANTS = CONSTANTS.connection.leetcodeAPI;
 const { createEntry } = require(path.join(__dirname, '..', 'sequelize', 'createEntry'));
 const { connectAndReturnAllTables } = require(path.join(__dirname, '..', 'sequelize', 'sequelize'));
+const { LeetcodeAPIError } = require(path.join(__dirname, '..', 'helpers', 'errors'));
 
 async function getUserLeetcodeStats(username) {
 	const { endpoint, headers, method } = LOCALCONSTANTS;
@@ -19,8 +20,8 @@ async function getUserLeetcodeStats(username) {
 		return { all, easy, medium, hard };
 	}
 	catch (error) {
-		console.error('Error while calling graphQL leetcode API!');
-		throw (error);
+		console.error('Error while calling graphQL Leetcode API!');
+		throw new LeetcodeAPIError('Error connecting to Leetcode API. Please try again in sometime.');
 	}
 }
 
