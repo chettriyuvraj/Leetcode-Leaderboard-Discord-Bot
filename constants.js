@@ -9,6 +9,7 @@ module.exports = {
 	},
 	errors: {
 		SequelizeUniqueConstraintError: 'SequelizeUniqueConstraintError',
+		NoSuchUserExistsError: 'NoSuchUserExistsError',
 	},
 	events: {
 		interactionCreate: {
@@ -31,7 +32,7 @@ module.exports = {
 		},
 		leaderboard: {
 			name: 'leaderboard',
-			description: 'Check out the current Leetcode leaderboard for this server!',
+			description: 'Check out the current Leetcode leaderboard for this server (no. of problems solved after registration)!',
 			options: {
 				string: {
 					leaderboardType: {
@@ -42,6 +43,19 @@ module.exports = {
 							{ name: 'Detailed Leaderboard', value: 'detailed' },
 							{ name: 'Overall leaderboard', value : 'overall' },
 						],
+					},
+				},
+			},
+		},
+		deregister: {
+			name: 'de-register',
+			description: 'De-register yourself from the Leetcode leaderboard :(',
+			options: {
+				string: {
+					leetcodeUsername: {
+						name: 'leetcode_username',
+						description: 'Your leetcode username',
+						required: true,
 					},
 				},
 			},
