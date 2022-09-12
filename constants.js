@@ -32,7 +32,7 @@ module.exports = {
 		},
 		leaderboard: {
 			name: 'leaderboard',
-			description: 'Check out the current Leetcode leaderboard for this server (no. of problems solved after registration)!',
+			description: 'Check out the Leetcode leaderboard for this server (no. of problems solved after registration)!',
 			options: {
 				string: {
 					leaderboardType: {
