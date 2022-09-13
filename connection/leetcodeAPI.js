@@ -29,12 +29,11 @@ const updateAllUsersLeetcodeStats = async () => {
 	try {
 		const { userTable, questionSolvedTable } = await connectAndReturnAllTables();
 		const allUsersDataObjList = await userTable.findAll();
-		for (const userDataObj of allUsersDataObjList) {
-			const userData = userDataObj.dataValues;
-			const userStats = await getUserLeetcodeStats(userData.leetcode_username);
+		const uniqueLeetcodeUsernames = [...new Set(allUsersDataObjList.map(userDataObj => userDataObj.leetcode_username))];
+		for (const leetcode_username of uniqueLeetcodeUsernames) {
+			const userStats = await getUserLeetcodeStats(leetcode_username);
 			await createEntry(questionSolvedTable, {
-				leetcode_username: userData.leetcode_username,
-				discord_username: userData.discord_username,
+				leetcode_username,
 				easy_solved: userStats.easy.count,
 				medium_solved: userStats.medium.count,
 				hard_solved: userStats.hard.count,
@@ -51,7 +50,6 @@ const parseUserLeetcodeStats = (leetcodeAPIResponse) => {
 	return leetcodeAPIResponse.data.data.matchedUser.submitStats.acSubmissionNum;
 };
 
-updateAllUsersLeetcodeStats();
 
 module.exports = {
 	getUserLeetcodeStats,

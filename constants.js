@@ -98,11 +98,6 @@ module.exports = {
 						allowNull: false,
 						unique: false,
 					},
-					discord_username: {
-						type: Sequelize.STRING(100),
-						allowNull: false,
-						unique: false,
-					},
 					easy_solved: Sequelize.INTEGER,
 					medium_solved : Sequelize.INTEGER,
 					hard_solved : Sequelize.INTEGER,

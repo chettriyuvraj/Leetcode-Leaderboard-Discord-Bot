@@ -17,12 +17,13 @@ module.exports = {
 		try {
 			await interaction.deferReply();
 			const leetcodeUsername = interaction.options.getString(LOCALCONSTANTS.options.string.leetcodeUsername.name);
-			const { userTable } = await connectAndReturnAllTables();
+			const { userTable, questionSolvedTable } = await connectAndReturnAllTables();
 			await deleteUser(
 				leetcodeUsername,
 				interaction.user.id,
 				interaction.guild.id,
-				userTable);
+				userTable,
+				questionSolvedTable);
 			await interaction.editReply('Successfully deregistered user!');
 		}
 		catch (error) {

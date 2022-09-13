@@ -39,7 +39,6 @@ module.exports = {
 			});
 			await createEntry(questionSolvedTable, {
 				leetcode_username: leetcodeUsername,
-				discord_username: interaction.user.username,
 				easy_solved: userStats.easy.count,
 				medium_solved: userStats.medium.count,
 				hard_solved: userStats.hard.count,
