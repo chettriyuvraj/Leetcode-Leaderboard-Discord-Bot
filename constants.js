@@ -2,13 +2,11 @@ const Sequelize = require('sequelize');
 
 module.exports = {
 	/* One parent key for each folder + errors */
-	charts: {
-
-	},
 	errors: {
 		SequelizeUniqueConstraintError: 'SequelizeUniqueConstraintError',
 		NoSuchUserExistsError: 'NoSuchUserExistsError',
 		LeetcodeAPIError: 'LeetcodeAPIError',
+		DuplicateUserError: 'DuplicateUserError',
 	},
 	events: {
 		interactionCreate: {
