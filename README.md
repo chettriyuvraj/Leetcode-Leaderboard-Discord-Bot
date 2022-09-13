@@ -1,6 +1,12 @@
 
 # Leetcode Leaderboard Discord Bot
 
+
+## Background 
+I always struggle with motivation to keep up with Leetcode, and I've found peer accountability groups super-helpful in this regard. 
+
+I recently joined one such Discord server and figured creating a Discord bot to maintain a Leetcode leaderboard for the server would be fun.
+
 ## Bot in action
 
 The bot works basis 3 simple slash commands:
@@ -36,14 +42,6 @@ The bot works basis 3 simple slash commands:
 
   <br>
 
-This bot is currently being hosted on my home server - an old Raspberry Pi 3.
-
-![Raspberry Pi Hosting](./images/RaspberryPi.jpg)
-
-## Background 
-I always struggle with motivation to keep up with Leetcode, and I've found peer accountability groups super-helpful in this regard. 
-
-I recently joined one such Discord server and figured creating a Discord bot to maintain a Leetcode leaderboard for the server would be fun.
 
 ## Basic workflow
 
@@ -112,11 +110,6 @@ Here's how you can setup this bot for your own Discord Server:
 ![RaspberryPi][respberrypi]
 
 
-[node.js]: https://img.shields.io/badge/NodeJS%20-yellow?style=for-the-badge&logo=nodedotjs
-[postgresql]: https://img.shields.io/badge/PostgreSQL%20-lightgrey?style=for-the-badge&logo=postgresql
-[respberrypi]: https://img.shields.io/badge/Raspberry%20Pi%20-red?style=for-the-badge&logo=raspberrypi
-
-
 ## References
 
 * [Setting up a Discord bot with discord.js](https://discordjs.guide/)
@@ -128,3 +121,13 @@ Here's how you can setup this bot for your own Discord Server:
 * [Using an Android Device to write Raspberry Pi SD Cards](https://www.tomshardware.com/how-to/android-write-raspberry-pi-sd-cards)
 
 * [Use Windows Laptop as a monitor for Raspberry Pi](https://beebom.com/how-use-windows-laptop-as-monitor-raspberry-pi/)
+
+## Extras
+  My Pi hosting the bot :P
+
+  ![Raspberry Pi Hosting](./images/RaspberryPi.jpg)
+
+
+[node.js]: https://img.shields.io/badge/NodeJS%20-yellow?style=for-the-badge&logo=nodedotjs
+[postgresql]: https://img.shields.io/badge/PostgreSQL%20-lightgrey?style=for-the-badge&logo=postgresql
+[respberrypi]: https://img.shields.io/badge/Raspberry%20Pi%20-red?style=for-the-badge&logo=raspberrypi
