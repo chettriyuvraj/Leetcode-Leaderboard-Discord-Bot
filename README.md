@@ -14,6 +14,7 @@ The bot works basis 3 simple slash commands:
 * **/register <enter-leetcode-username>**
 
   To add your Leetcode username to the leaderboard.
+  <br>
   ![Leaderboard command](./images/registerCommand.PNG)
   
 
