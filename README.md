@@ -14,23 +14,19 @@ The bot works basis 3 simple slash commands:
 * **/register <enter-leetcode-username>**
 
   To add your Leetcode username to the leaderboard.
-  <br>
   ![Leaderboard command](./images/registerCommand.PNG)
   
-  <br>
 
 * **/de-register**
  Remove your registered Leetcode username (if you don't want your username in the leaderboard anymore or want to register a different username).
 
-  <br>
 
   ![De-register command](./images/deRegisterCommand.PNG)
-  <br>
 
 * **/leaderboard**
   
    Generates a Chart.js bar chart showing the number of problems solved 
-   <br>
+
 
   ![Leaderboard command](./images/leaderboardCommand.PNG)
   <br>
@@ -46,9 +42,9 @@ The bot works basis 3 simple slash commands:
 ## Basic workflow
 
 * Leetcode has a public GraphQL API which returns Leetcode stats on providing Leetcode username.
-<br>
+
 * A cron-job (using node-cron) runs on the server every 45 minutes to fetch the Leetcode stats for all registered users.
-<br>
+
 * Charts generated using Charts.js.
 
 ## Setup
@@ -56,7 +52,7 @@ The bot works basis 3 simple slash commands:
 Here's how you can setup this bot for your own Discord Server:
 
 * Fork this repository.
-<br>
+
 
 * Create your own Discord application (bots reside inside applications) [here](https://discord.com/developers/applications). **Grab the Application ID (it is your client ID)** from here. Do not share this with anyone.
 
@@ -69,10 +65,10 @@ Here's how you can setup this bot for your own Discord Server:
 
 * [Download PostgreSQL](https://www.postgresql.org/).
 
- <br>
+ 
 
 * Setup **username, password and a new database** using psql command line tool.
-<br>
+
 
 * Create a file named _config.json_ in your root directory and **add the keys you grabbed above**.
 
@@ -81,24 +77,21 @@ Here's how you can setup this bot for your own Discord Server:
 
 * [Download NodeJS](https://nodejs.org/en/download/current/) 
 
-<br>
 
 * Run '_npm i_' command in the terminal - inside your forked project directory.
-<br>
 
 * Run '_node index.js_' command. Your bot is now online!
-<br>
 
-* Invite the bot to your server using this link format: <add image> You can now use the bot :)
+* Invite the bot to your server using this link format: ![Discord Bot Invite](./images/discordBotInvite.PNG) You can now use the bot :)
 
 ## Notes
 
 * You will probably need to host your bot + database somewhere if you want it online all the time.
   Free hosters like Heroku have a mandatory downtime so I dug my old Raspberry Pi to host it. (setting up the Pi turned into a separate project by itself :P).
-  <br>
+
 
 * No load testing/optimization has been done so you should probably expect this bot to crumble with large loads.
-<br>
+
 
 * Feel free to use this as a base for something better/point out issues.
 
